@@ -10,7 +10,7 @@ import Pagination from './components/Pagination';
 
 function App() {
   const [page, setpage] = useState(1)
-   const { data, totalPage, griddata } = useSelector((state) => state);
+   const { data, totalPage, griddata,isLoading,isError } = useSelector((state) => state);
    const dispatch = useDispatch();
 
    useEffect(() => {
@@ -31,8 +31,19 @@ function App() {
     <div>
       <Banner />
       <SearchBar />
-      <Grid data={griddata}/>
-      <Pagination arr={new Array(Math.ceil(data.length/10)).fill(0)} totalPage={totalPage} page={page} setpage={setpage}/>
+      {isLoading ? (
+        <h1>Loading</h1>
+      ) : isError ? (
+        <h1>Something Went Wrong</h1>
+      ) : (
+        <Grid data={griddata} />
+      )}
+      <Pagination
+        arr={new Array(Math.ceil(data.length / 10)).fill(0)}
+        totalPage={totalPage}
+        page={page}
+        setpage={setpage}
+      />
     </div>
   );
 }

@@ -35,3 +35,8 @@ background-color: white;
 color: black;
 
 }
+@media (min-width: 0px) and (max-width: 500px) {
+  .banner-main {
+    height: 800px;
+  }
+}
