@@ -1,0 +1,16 @@
+.grid-main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.grid-signleItem{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 10px 20px;
+}
+.grid-data{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+    cursor: pointer;
+}
