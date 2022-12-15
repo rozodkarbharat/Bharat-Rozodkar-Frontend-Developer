@@ -1,0 +1,7 @@
+.banner-main{
+    background-image: url("../../public/rocket1.webp");
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 800px;
+}
